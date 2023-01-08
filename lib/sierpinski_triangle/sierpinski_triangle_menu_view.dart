@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fractals/sierpinski_triangle/chaos_game/chaos_game_view.dart';
 import 'package:fractals/sierpinski_triangle/removing_triangles/removing_triangles_view.dart';
+import 'package:fractals/sierpinski_triangle/shrinking_and_multiplying/shrinking_and_multiplying_view.dart';
 
 class SierpinskiTriangleMenuView extends StatelessWidget {
   const SierpinskiTriangleMenuView({super.key});
@@ -28,6 +29,14 @@ class SierpinskiTriangleMenuView extends StatelessWidget {
               onTap: () => Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) => const ChaosGameView(),
+                ),
+              ),
+            ),
+            ListTile(
+              title: const Text('Shrinking and multiplying'),
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const ShrinkingAndMultiplyingView(),
                 ),
               ),
             )

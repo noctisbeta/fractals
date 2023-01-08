@@ -48,21 +48,6 @@ class _RemovingTrianglesViewState extends State<RemovingTrianglesView> {
                 ),
               ),
               const SizedBox(height: 16),
-              // Expanded(
-              //   child: InteractiveViewer(
-              //     maxScale: 100,
-              //     child: AspectRatio(
-              //       aspectRatio: 1,
-              //       child: CustomPaint(
-              //         isComplex: true,
-              //         willChange: true,
-              //         painter: RemovingTrianglesPainter(
-              //           steps: steps,
-              //         ),
-              //       ),
-              //     ),
-              //   ),
-              // ),
               Expanded(
                 child: InteractiveViewer.builder(
                   boundaryMargin: const EdgeInsets.all(10000),
