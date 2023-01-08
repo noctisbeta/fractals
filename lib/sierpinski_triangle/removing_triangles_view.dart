@@ -12,7 +12,7 @@ class _RemovingTrianglesViewState extends State<RemovingTrianglesView> {
   int steps = 1;
 
   void incrementSteps() {
-    if (steps < 10) {
+    if (steps < 11) {
       setState(() {
         steps++;
       });
@@ -48,17 +48,40 @@ class _RemovingTrianglesViewState extends State<RemovingTrianglesView> {
                 ),
               ),
               const SizedBox(height: 16),
+              // Expanded(
+              //   child: InteractiveViewer(
+              //     maxScale: 100,
+              //     child: AspectRatio(
+              //       aspectRatio: 1,
+              //       child: CustomPaint(
+              //         isComplex: true,
+              //         willChange: true,
+              //         painter: RemovingTrianglesPainter(
+              //           steps: steps,
+              //         ),
+              //       ),
+              //     ),
+              //   ),
+              // ),
               Expanded(
-                child: InteractiveViewer(
+                child: InteractiveViewer.builder(
+                  boundaryMargin: const EdgeInsets.all(10000),
                   maxScale: 100,
-                  child: AspectRatio(
-                    aspectRatio: 1,
-                    child: CustomPaint(
+                  minScale: 0.001,
+                  builder: (context, viewport) {
+                    return CustomPaint(
+                      size: Size(
+                        MediaQuery.of(context).size.width - 32,
+                        MediaQuery.of(context).size.width - 32,
+                      ),
+                      isComplex: true,
+                      willChange: true,
                       painter: RemovingTrianglesPainter(
                         steps: steps,
+                        viewport: viewport,
                       ),
-                    ),
-                  ),
+                    );
+                  },
                 ),
               ),
               const SizedBox(height: 16),

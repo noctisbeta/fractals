@@ -1,12 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:fractals/sierpinski_triangle/triangle.dart';
+import 'package:vector_math/vector_math_64.dart' hide Triangle, Colors;
 
 class RemovingTrianglesPainter extends CustomPainter {
-  RemovingTrianglesPainter({required this.steps});
+  const RemovingTrianglesPainter({
+    required this.steps,
+    required this.viewport,
+  });
 
   final int steps;
 
+  final Quad viewport;
+
   void drawTriangle(Triangle triangle, Canvas canvas, int steps) {
+    if (triangle.c.dx < viewport.point0.x ||
+        triangle.b.dx > viewport.point1.x) {
+      return;
+    }
+
     final path = Path()
       ..moveTo(triangle.a.dx, triangle.a.dy)
       ..lineTo(triangle.b.dx, triangle.b.dy)

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fractals/sierpinski_triangle/triangle.dart';
 
 class ChaosGamePainter extends CustomPainter {
   @override
