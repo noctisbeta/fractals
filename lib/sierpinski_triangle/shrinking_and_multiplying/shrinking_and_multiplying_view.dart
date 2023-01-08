@@ -62,8 +62,6 @@ class _ShrinkingAndMultiplyingViewState
     metaTriangleItems.add(temp);
 
     setState(() {});
-
-    log(triangleItems.length.toString());
   }
 
   void decrementSteps() {
@@ -144,7 +142,8 @@ class _ShrinkingAndMultiplyingViewState
                           height: MediaQuery.of(context).size.width - 32,
                         ),
                         ...metaTriangleItems.last.map(
-                          (e) => Positioned(
+                          (e) => AnimatedPositioned(
+                            duration: const Duration(milliseconds: 500),
                             left: e.offset.dx,
                             top: e.offset.dy,
                             child: TriangleWidget(
