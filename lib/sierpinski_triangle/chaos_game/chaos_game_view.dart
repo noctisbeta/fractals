@@ -4,7 +4,6 @@ import 'dart:math' hide log;
 
 import 'package:flutter/material.dart';
 import 'package:fractals/sierpinski_triangle/chaos_game/chaos_game_painter.dart';
-import 'package:fractals/sierpinski_triangle/removing_triangles/removing_triangles_painter.dart';
 
 class ChaosGameView extends StatefulWidget {
   const ChaosGameView({super.key});

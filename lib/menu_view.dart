@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fractals/sierpinski_triangle/removing_triangles/removing_triangles_view.dart';
+import 'package:fractals/sierpinski_carpet/removing_squares/removing_squares_view.dart';
 import 'package:fractals/sierpinski_triangle/sierpinski_triangle_menu_view.dart';
 
 class MenuView extends StatelessWidget {
@@ -27,7 +27,7 @@ class MenuView extends StatelessWidget {
               title: const Text('Sierpinski Carpet'),
               onTap: () => Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (context) => const RemovingTrianglesView(),
+                  builder: (context) => const RemovingSquaresView(),
                 ),
               ),
             )

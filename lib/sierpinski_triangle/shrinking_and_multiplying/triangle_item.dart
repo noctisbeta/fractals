@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:fractals/sierpinski_triangle/shrinking_and_multiplying/bhtriangle.dart';
-import 'package:fractals/sierpinski_triangle/triangle.dart';
 
 class TriangleItem {
   TriangleItem({
