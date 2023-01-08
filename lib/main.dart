@@ -1,26 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:fractals/sierpinski_triangle.dart';
+import 'package:fractals/menu_view.dart';
 
 void main() {
   runApp(
     const MaterialApp(
-      home: MyApp(),
+      home: MenuView(),
     ),
   );
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: CustomPaint(
-          size: const Size(300, 300),
-          painter: SierpinskiTrianglePainter(),
-        ),
-      ),
-    );
-  }
 }

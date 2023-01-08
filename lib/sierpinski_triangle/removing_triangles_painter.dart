@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:fractals/triangle.dart';
+import 'package:fractals/sierpinski_triangle/triangle.dart';
 
-class SierpinskiTrianglePainter extends CustomPainter {
+class RemovingTrianglesPainter extends CustomPainter {
+  RemovingTrianglesPainter({required this.steps});
+
+  final int steps;
+
   void drawTriangle(Triangle triangle, Canvas canvas, int steps) {
     final path = Path()
       ..moveTo(triangle.a.dx, triangle.a.dy)
@@ -47,7 +51,7 @@ class SierpinskiTrianglePainter extends CustomPainter {
       Offset(size.width, size.height),
     );
 
-    drawSteps(canvas, 8, original);
+    drawSteps(canvas, steps, original);
   }
 
   @override
