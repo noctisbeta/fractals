@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fractals/sierpinski_triangle/removing_triangles_view.dart';
+import 'package:fractals/sierpinski_triangle/removing_triangles/removing_triangles_view.dart';
 import 'package:fractals/sierpinski_triangle/sierpinski_triangle_menu_view.dart';
 
 class MenuView extends StatelessWidget {

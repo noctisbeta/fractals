@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fractals/sierpinski_triangle/removing_triangles_view.dart';
+import 'package:fractals/sierpinski_triangle/chaos_game/chaos_game_view.dart';
+import 'package:fractals/sierpinski_triangle/removing_triangles/removing_triangles_view.dart';
 
 class SierpinskiTriangleMenuView extends StatelessWidget {
   const SierpinskiTriangleMenuView({super.key});
@@ -24,9 +25,11 @@ class SierpinskiTriangleMenuView extends StatelessWidget {
             ),
             ListTile(
               title: const Text('Chaos Game'),
-              onTap: () {
-                Navigator.pushNamed(context, '/chaos_game');
-              },
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const ChaosGameView(),
+                ),
+              ),
             )
           ],
         ),
