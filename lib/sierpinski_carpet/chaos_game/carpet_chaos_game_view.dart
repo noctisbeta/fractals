@@ -88,8 +88,8 @@ class _CarpetChaosGameViewState extends State<CarpetChaosGameView> {
       final randomPoint = randomInsideSquare();
 
       final newPoint = Offset(
-            points.last.dx + vertex.dx,
-            points.last.dy + vertex.dy,
+            points.last.dx + 2 * vertex.dx,
+            points.last.dy + 2 * vertex.dy,
           ) *
           1 /
           3;
